@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Parcial_1"
         tools:targetApi="31">
         <activity
+            android:name=".Conversor"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

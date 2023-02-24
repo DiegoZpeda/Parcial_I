@@ -2,14 +2,21 @@ package com.ugb.parcial_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.DatabaseErrorHandler;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TabHost;
 import android.widget.TextView;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
+
+    TabHost tab;
     TextView temp;
     Spinner spn;
     conversores miConversor = new conversores();
@@ -17,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tab = findViewById(R.id.tabConvertir);
+        tab.setup();
+        tab.addTab(tab.newTabSpec("conversor").setContent(R.id.tabConvertir).setIndicator("Conversor"));
+
         btn = findViewById(R.id.btnConvertir);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
