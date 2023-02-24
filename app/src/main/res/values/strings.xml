@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Parcial_1</string>
+    <string-array name="conversor">
+        <item>Vara cuadrada</item>
+        <item>Metro Cuadrado</item>
+        <item>Tareas</item>
+        <item>Manzana</item>
+        <item>Hectarea</item>
+        <item>Acres</item>
+    </string-array>
+</resources>
